@@ -1,0 +1,13 @@
+services:
+  sentinel-api:
+    build: .
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+      JWT_SECRET: change-this-in-production
+    volumes:
+      - sentinel-data:/app/data
+
+volumes:
+  sentinel-data:
